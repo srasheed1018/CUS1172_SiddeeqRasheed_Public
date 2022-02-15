@@ -1,0 +1,66 @@
+
+* {
+    font-family: "Monaco", Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(89, 117, 133);
+}
+ 
+ h2 {
+    color: rgb(32, 42, 48);
+    text-shadow: 0px 0px 5px rgb(166, 248, 248);
+    font-style: italic;
+}
+  
+p, tr, th, td, li {
+    color: rgb(32, 42, 48);
+    font-size: large;
+}
+
+/*The following styling applies when the page's width is less than or equal to 1000 */
+@media (max-width: 1000px) {
+    form>input {
+        height: 1.5vh;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        height: 2vh;
+    }
+
+    .favImages, iframe {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    #menu_bar {
+        text-align: center;
+    }
+
+    #menu_bar:nth-child(even) {
+        display:grid;
+    }
+}
+
+/*The following styling applies when the page's width is greater than 1000 */
+@media (min-width: 1001px) {
+    #menu_bar {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media print {
+    .screen_only {
+        display: none;
+    }
+}
