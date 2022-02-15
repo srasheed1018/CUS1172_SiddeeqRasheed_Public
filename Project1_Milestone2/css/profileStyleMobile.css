@@ -1,0 +1,31 @@
+/*The following styling applies when the page's width is less than or equal to 1000 */
+@media (max-width: 1000px) {
+    form>input {
+        height: 1.5vh;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        height: 2vh;
+    }
+
+    .favImages, iframe {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    #menu_bar {
+        text-align: center;
+    }
+
+    #menu_bar:nth-child(even) {
+        display:grid;
+    }
+}
