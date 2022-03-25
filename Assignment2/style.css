@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+    color: aliceblue;
+    background-color: darkslategray;
+}
+
+h1 {
+    padding-top: 2%;
+}
+
+ul {
+    padding: 2%;
+}
+
+li {
+    padding: 3px;
+    list-style: none;
+}
