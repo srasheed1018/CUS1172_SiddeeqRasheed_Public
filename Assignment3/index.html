@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- include bootstap dependencies -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+        <!-- Include handlebars library -->
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        
+        <script src="quiz_script.js"></script>
+
+    </head>
+    <body>
+        <!--This div is where views are displayed-->
+        <div id="widget_view" style="text-align: center; margin: 50px;">
+        </div>
+
+        <!--
+        <div>Current Question: <span id="current_question">0</span></div>
+        <div>Questions Correct: <span id="questions_correct">0</span></div>
+        -->
+    </body>
+
+    <script id="intro_view" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span>Please enter your name:</span>
+                    <input type="text" id="name_input">
+                    <button id="name_button">OK</button>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="question_view_tf" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span style="text-align: center;">{{this.questionText}}</span>
+                    <br>
+                    <button id="true_button" class="answer" data-answer="true">True</button>
+                    <button id="false_button" class="answer" data-answer="false">False</button>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="question_view_mc" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span style="text-align: center;">{{this.questionText}}</span>
+                    <br>
+                    <button id="mc_button1" class="answer" data-answer="{{this.options[0]}}">{{this.options[0]}}</button>
+                    <button id="mc_button2" class="answer" data-answer="{{this.options[1]}}">{{this.options[1]}}</button>
+                    <button id="mc_button3" class="answer" data-answer="{{this.options[2]}}">{{this.options[2]}}</button>
+                    <button id="mc_button4" class="answer" data-answer="{{this.options[3]}}">{{this.options[3]}}</button>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="question_view_text" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span style="text-align: center;">{{this.questionText}}</span>
+                    <br>
+                    <input type="text" id="answer_text">
+                    <button id="text_button" class="answer">Submit</button>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="feedback_correct" type="text/x-handlebars-template">
+        <div class="container">
+          <div class="row">
+              <div class="col">
+                <div>
+                  <span>Correct!</span>
+                  <button id="feedback_button"> OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </script>
+
+      <script id="feedback_incorrect" type="text/x-handlebars-template">
+        <div class="container">
+          <div class="row">
+              <div class="col">
+                <div>
+                  <span>Sorry, that answer was incorrect.</span>
+                  <button id="feedback_button"> OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </script>
+
+      <script id="end_view" type="text/x-handlebars-template">
+        <div class="container">
+          <div class="row">
+              <div class="col">
+                <div>
+                  <span> Thank you for taking the quiz</span>
+                </div>
+              </div>
+            </div>
+          </div>
+      </script>
+</html>
