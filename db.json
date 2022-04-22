@@ -1,16 +1,62 @@
 {
   "questions": [
     {
-      "questionType": "true_false",
-      "questionText": "The earth is round",
-      "correctAnswer": "true",
-      "options": ["true", "false"]
+      "questionType": "tf",
+      "questionText": "In Java, garbage collection is handled automatically.",
+      "correctAnswer": "true"
     },
     {
-      "questionType": "text_input",
-      "questionText": "What is the value of the expression 1+1",
-      "correctAnswer": "2",
-      "answerFieldId": "answer_to_question"
+      "questionType": "mc",
+      "questionText": "What is a correct syntax to output 'Hello World' in Java?",
+      "correctAnswer": "System.out.println('Hello World');",
+      "options": ["echo('Hello World');","Console.WriteLine('Hello World');","System.out.println('Hello World');","print('Hello World');"]
+    },
+    {
+      "questionType": "text",
+      "questionText": "In Java, what keyword is used to skip to the next iteration in a loop?",
+      "correctAnswer": "continue"
+    },
+    {
+      "questionType": "mc",
+      "questionText": "Which method can be used to find the highest value of x and y?",
+      "correctAnswer": "Math.max(x,y)",
+      "options": ["Math.largest(x,y)","Math.max(x,y)","Math.maximum(x,y)","Math.maxNum(x,y)"]
+    },
+    {
+      "questionType": "tf",
+      "questionText": "In Java, it is possible to inherit attributes and methods from one class to another.",
+      "correctAnswer": "true"
+    },
+    {
+      "questionType": "mc",
+      "questionText": "Which operator can be used to compare two values?",
+      "correctAnswer": "==",
+      "options": ["<>","><","=","=="]
+    },
+    {
+      "questionType": "tf",
+      "questionText": "Java is short for 'JavaScript'",
+      "correctAnswer": "false"
+    },
+    {
+      "questionType": "text",
+      "questionText": "In Java, what keyword is an access modifier used for classes, attributes, methods and constructors, making them accessible by any other class?",
+      "correctAnswer": "public"
+    },
+    {
+      "questionType": "mc",
+      "questionText": "Which method can be used to return a string in upper case letters?",
+      "correctAnswer": "toUpperCase()",
+      "options": ["tuc()","upperCase()","toUpperCase()","touppercase()"]
+    },
+    {
+      "questionType": "mc",
+      "questionText": "How do you call a method in Java?",
+      "correctAnswer": "toUpperCase()",
+      "options": ["(methodName);","methodName;","methodName();","methodName[];"]
     }
-  ]
+  ],
+  "metadata": {
+      "quiz_length": 10
+  }
 }
